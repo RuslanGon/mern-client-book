@@ -11,7 +11,6 @@ export const ShopPage = () => {
       </nav>
 
       <Routes>
-        {/* Маршруты для дочерних компонентов */}
         <Route path="about" element={<About />} />
         <Route path="blog" element={<Blog />} />
       </Routes>
