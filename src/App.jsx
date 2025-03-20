@@ -9,18 +9,14 @@ function App() {
     <>
       <header>
         <nav>
-          <NavLink  to="/">
-            Home
-          </NavLink>
-          <NavLink to="/shop">
-            Shop
-          </NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/shop">Shop</NavLink>
         </nav>
       </header>
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/shop/*" element={<ShopPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
