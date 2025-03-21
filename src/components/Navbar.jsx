@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBlog } from "react-icons/fa6";
 
-
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -39,11 +38,21 @@ const Navbar = () => {
         <div>
           <Link
             className="text-2xl font-bold text-blue-700 flex items-center gap-2"
-            to="/">
+            to="/"
+          >
             <FaBlog className="inline-block" /> Books
           </Link>
-          <ul>
-            {navItems.map(({link, path}) => <Link key={path} to={path} className='block  text-base text-black'>{link}</Link>) }
+          <ul className="md:flex md:space-x-12 flex flex-row gap-12">
+            {navItems.map(({ link, path }) => (
+              <li key={path}>
+                <Link
+                  to={path}
+                  className="block text-base text-black uppercase cursor-pointer hover:text-blue-700"
+                >
+                  {link}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
