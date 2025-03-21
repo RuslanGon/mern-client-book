@@ -38,18 +38,15 @@ const Navbar = () => {
         <div>
           <Link
             className="text-2xl font-bold text-blue-700 flex items-center gap-2"
-            to="/"
-          >
+            to="/" >
             <FaBlog className="inline-block" /> Books
           </Link>
           <ul className="md:flex md:space-x-12 flex flex-row gap-12">
             {navItems.map(({ link, path }) => (
               <li key={path}>
-                <Link
-                  to={path}
+                <Link to={path}
                   className="block text-base text-black uppercase cursor-pointer hover:text-blue-700"
-                >
-                  {link}
+                >{link}
                 </Link>
               </li>
             ))}
