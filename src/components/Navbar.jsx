@@ -70,13 +70,13 @@ const Navbar = () => {
       </nav>
 
       {/* Мобильное меню */}
-      <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"} bg-white shadow-md`}>
+      <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"} bg-blue-700 shadow-md`}>
         <ul className="space-y-4 px-4 py-2">
           {navItems.map(({ link, path }) => (
             <li key={path}>
               <Link
                 to={path}
-                className="block text-base text-black uppercase cursor-pointer hover:text-blue-700"
+                className="block text-base text-white uppercase cursor-pointer"
               >
                 {link}
               </Link>
