@@ -19,7 +19,6 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* Добавлен правильный путь для ShopPage с вложенными маршрутами */}
           <Route path="/shop/*" element={<ShopPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
