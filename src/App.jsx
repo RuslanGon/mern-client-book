@@ -2,31 +2,22 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
 import { ShopPage } from "./pages/ShopPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
-import "./index.css";
 import Navbar from "./components/Navbar.jsx";
 import { Blog } from "./components/Blog.jsx";
 import { About } from "./components/About.jsx";
+import "./index.css";
 
 function App() {
   return (
     <>
-      <header>
-        <Navbar />
-        <nav className="hidden md:flex">
-          {/* Навигация для больших экранов */}
-          {/* <NavLink to="/" className="mr-4">Home</NavLink> */}
-          {/* <NavLink to="/shop" className="mr-4">Shop</NavLink> */}
-        </nav>
-      </header>
-      <main>
+      <Navbar />
+      <main className="pt-16"> 
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop/*" element={<ShopPage />} />
-          <Route path="*" element={<NotFoundPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
-
-
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
     </>
