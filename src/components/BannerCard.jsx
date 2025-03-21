@@ -14,15 +14,15 @@ const BannerCard = () => {
         modules={[EffectCards]}
         className={css.mySwiper} 
       >
-        <SwiperSlide className={css.mySwiperSlide}>Slide 1</SwiperSlide>
-        <SwiperSlide className={css.mySwiperSlide}>Slide 2</SwiperSlide>
-        <SwiperSlide className={css.mySwiperSlide}>Slide 3</SwiperSlide>
-        <SwiperSlide className={css.mySwiperSlide}>Slide 4</SwiperSlide>
-        <SwiperSlide className={css.mySwiperSlide}>Slide 5</SwiperSlide>
-        <SwiperSlide className={css.mySwiperSlide}>Slide 6</SwiperSlide>
-        <SwiperSlide className={css.mySwiperSlide}>Slide 7</SwiperSlide>
-        <SwiperSlide className={css.mySwiperSlide}>Slide 8</SwiperSlide>
-        <SwiperSlide className={css.mySwiperSlide}>Slide 9</SwiperSlide>
+        <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
+        <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
+        <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
+        <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
+        <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
+        <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
+        <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
+        <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
+        <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
       </Swiper>
     </div>
   );
