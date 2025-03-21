@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <nav className="hidden md:flex">
           {/* Навигация для больших экранов */}
-          <NavLink to="/" className="mr-4">Home</NavLink>
+          {/* <NavLink to="/" className="mr-4">Home</NavLink> */}
           {/* <NavLink to="/shop" className="mr-4">Shop</NavLink> */}
         </nav>
       </header>
