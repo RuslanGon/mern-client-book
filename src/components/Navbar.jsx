@@ -41,7 +41,7 @@ const Navbar = () => {
             to="/" >
             <FaBlog className="inline-block" /> Books
           </Link>
-          <ul className="md:flex md:space-x-12 flex flex-row gap-12">
+          <ul className="flex flex-row gap-12">
             {navItems.map(({ link, path }) => (
               <li key={path}>
                 <Link to={path}
