@@ -20,9 +20,7 @@ const BannerCard = () => {
         <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
         <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
         <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
-        <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
-        <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
-        <SwiperSlide className={css.mySwiperSlide}></SwiperSlide>
+
       </Swiper>
     </div>
   );

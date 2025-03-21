@@ -37,16 +37,4 @@ background-image: url('/src/assets/book1.png');
 
   }
   
-  .mySwiperSlide:nth-child(6n) {
-    background-color: rgb(180, 10, 47);
-  }
-  
-  .mySwiperSlide:nth-child(7n) {
-    background-color: rgb(35, 99, 19);
-  }
-  
-  .mySwiperSlide:nth-child(8n) {
-    background-color: rgb(0, 68, 255);
-  }
-  
   
