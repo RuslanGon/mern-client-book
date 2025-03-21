@@ -3,11 +3,13 @@ import HomePage from "./pages/HomePage.jsx";
 import { ShopPage } from "./pages/ShopPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import "./index.css";
+import Navbar from "./components/Navbar.jsx";
 
 function App() {
   return (
     <>
       <header>
+        <Navbar />
         <nav>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/shop">Shop</NavLink>
