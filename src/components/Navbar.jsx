@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <header className="w-full fixed top-0 left-0 z-50 transition-all duration-300">
       <nav className={`py-4 px-6 lg:px-24 flex justify-between items-center transition-all duration-300 ${
-          isSticky ? "bg-blue-700 shadow-lg text-white" : "bg-transparent"
+          isSticky ? "bg-red-400 shadow-lg text-white" : "bg-transparent"
         }`}>
         <Link
           className="text-2xl font-bold text-blue-700 flex items-center gap-2"
