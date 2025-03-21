@@ -10,14 +10,16 @@ function App() {
     <>
       <header>
         <Navbar />
-        <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/shop">Shop</NavLink>
+        <nav className="hidden md:flex">
+          {/* Навигация для больших экранов */}
+          <NavLink to="/" className="mr-4">Home</NavLink>
+          <NavLink to="/shop" className="mr-4">Shop</NavLink>
         </nav>
       </header>
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          {/* Добавлен правильный путь для ShopPage с вложенными маршрутами */}
           <Route path="/shop/*" element={<ShopPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
