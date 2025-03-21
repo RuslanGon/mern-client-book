@@ -26,18 +26,25 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { Link: "Home", path: "/" },
-    { Link: "About", path: "/about" },
-    { Link: "Shop", path: "/shop" },
-    { Link: "Sell Your book", path: "/admin/dashboard" },
-    { Link: "Blog", path: "/blog" },
+    { link: "Home", path: "/" },
+    { link: "About", path: "/about" },
+    { link: "Shop", path: "/shop" },
+    { link: "Sell Your book", path: "/admin/dashboard" },
+    { link: "Blog", path: "/blog" },
   ];
 
   return (
     <header>
       <nav>
         <div>
-            <Link className="text-2xl font-bold text-blue-700 flex items-center" to='/'><FaBlog className="inline-block"/>Books</Link>
+          <Link
+            className="text-2xl font-bold text-blue-700 flex items-center gap-2"
+            to="/">
+            <FaBlog className="inline-block" /> Books
+          </Link>
+          <ul>
+            {navItems.map(({link, path}) => <Link key={path} to={path} className='block  text-base text-black'>{link}</Link>) }
+          </ul>
         </div>
       </nav>
     </header>
