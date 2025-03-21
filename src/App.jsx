@@ -4,6 +4,8 @@ import { ShopPage } from "./pages/ShopPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import "./index.css";
 import Navbar from "./components/Navbar.jsx";
+import { Blog } from "./components/Blog.jsx";
+import { About } from "./components/About.jsx";
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
         <nav className="hidden md:flex">
           {/* Навигация для больших экранов */}
           <NavLink to="/" className="mr-4">Home</NavLink>
-          <NavLink to="/shop" className="mr-4">Shop</NavLink>
+          {/* <NavLink to="/shop" className="mr-4">Shop</NavLink> */}
         </nav>
       </header>
       <main>
@@ -21,6 +23,10 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/shop/*" element={<ShopPage />} />
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/about" element={<About />} />
+
+
         </Routes>
       </main>
     </>
