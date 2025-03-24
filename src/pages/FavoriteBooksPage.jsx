@@ -1,16 +1,33 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState} from "react"
+import BookCards from "../components/BookCards.jsx"
+import axios from "axios";
 
 const FavoriteBooksPage = () => {
+  const [books, setBooks] = useState([]);
 
- const [books, setBooks] = useState([])
- 
- useEffect(() => {
-  fetch('http://localhost:5000//all-books').then(res => res.json()).then(data => console.log(data))
- }, [])
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/all-books")
+  //     .then((res) => res.json())
+  //     .then((data) => setBooks(data));
+  // }, []);
+
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        const { data } = await axios.get("http://localhost:5000/all-books");
+        setBooks(data);
+      } catch (error) {
+        console.error("Ошибка при загрузке книг:", error);
+      }
+    };
+    fetchBooks();
+  }, []);
 
   return (
-    <div>FavoriteBooksPage</div>
-  )
+    <div>
+      <BookCards books={books} headline='Best Seller Books' />
+    </div>
+  );
 }
 
 export default FavoriteBooksPage
