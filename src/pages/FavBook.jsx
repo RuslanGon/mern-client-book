@@ -1,5 +1,5 @@
 import React from 'react'
-import Favbook from '../assets/Favbook.jpg'
+import Favbook from '../assets/favbook.jpg'
 import { Link } from 'react-router-dom';
 
 const FavBook = () => {

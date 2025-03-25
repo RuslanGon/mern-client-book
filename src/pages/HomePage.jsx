@@ -1,6 +1,7 @@
 import Banner from "../components/Banner.jsx";
 import BestSellerPage from "./BestSellerPage.jsx";
 import FavBook from "./FavBook.jsx";
+import PromoBanner from "./PromoBanner.jsx";
 
 const HomePage = () => {
   return (
@@ -8,6 +9,7 @@ const HomePage = () => {
       <Banner />
       <BestSellerPage />
       <FavBook />
+      <PromoBanner />
     </div>
   );
 };
