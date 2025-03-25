@@ -5,7 +5,7 @@ import BooksImg from '../assets/awardbooks.png'
 const PromoBanner = () => {
   return (
     <div className="mt-16 py-12 bg-teal-100 px-4 lg:px-24">
-      <div>
+      <div className="flex flex-col md:flex-row justify-between items-center gap-12">
         <div className="md:w-1/2">
           <h2 className="text-4xl font-bold mb-6 leading-snug">
             2025 National Book Awards for Fiction Shortlist
@@ -17,7 +17,7 @@ const PromoBanner = () => {
           </Link>
         </div>
         <div>
-            <img src={BooksImg} alt="" />
+            <img className="w-96" src={BooksImg} alt="foto" />
         </div>
       </div>
     </div>
