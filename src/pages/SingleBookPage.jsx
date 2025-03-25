@@ -4,6 +4,7 @@ import axios from "axios";
 
 const SingleBookPage = () => {
   const { id } = useParams();
+  console.log(id);
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -28,10 +29,12 @@ const SingleBookPage = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div>
-      <h2>{book.bookTitle}</h2>
+    <div className="mt-28 px-4 lg:px-24">
+      {/* <h2>{book.bookTitle}</h2>
       <img src={book.imageURL} alt={book.bookTitle} />
-      <p>{book.bookDescription}</p>
+      <p>{book.bookDescription}</p> */}
+      <img src={book.imageURL} alt={book.bookTitle} className="h-98" />
+      <h2>{book.bookTitle}</h2>
     </div>
   );
 };
