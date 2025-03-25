@@ -53,14 +53,33 @@ const RewievPage = () => {
                 </div>
             </div>
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+            <div>
+                <div className='text-amber-500 flex gap-2'>
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                </div>
+                <div>
+                    <p>These books have been a true discovery for me! The gripping plot, deep characters, and unexpected twists make it impossible to put them down. Every page keeps you engaged, making you feel as if you're living the story alongside the characters.</p>
+                </div>
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div>
+                <div className='text-amber-500 flex gap-2'>
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                </div>
+                <div>
+                    <p>I've been reading books from this publisher for a long time, and they never disappoint. Each book is not only beautifully designed but also packed with engaging stories that stay with you long after you finish reading. </p>
+                </div>
+            </div>
+        </SwiperSlide>
+        
       </Swiper>
         </div>
     </div>
