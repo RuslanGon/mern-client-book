@@ -23,7 +23,7 @@ const Banner = () => {
               placeholder="Search a book"
               className="px-2 py-2 w-64 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
-            <button className='bg-blue-700 px-6 py-2 text-white font-medium hover:bg-black transition-all ease-in duration-200 rounded-lg'>Search</button>
+            <button className='bg-blue-700 px-6 py-2 text-white font-medium hover:bg-black transition-all ease-in duration-200 rounded-lg cursor-pointer'>Search</button>
           </div>
         </div>
         <div><BannerCard /></div>
