@@ -92,6 +92,19 @@ const RewievPage = () => {
                 </div>
             </div>
         </SwiperSlide>
+        <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
+            <div>
+                <div className='text-amber-500 flex gap-2'>
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                </div>
+                <div>
+                    <p>These books have been a true discovery for me! The gripping plot, deep characters, and unexpected twists make it impossible to put them down. Every page keeps you engaged, making you feel as if you're .</p>
+                </div>
+            </div>
+        </SwiperSlide>
       </Swiper>
         </div>
     </div>
