@@ -2,7 +2,7 @@ import { useEffect, useState} from "react"
 import BookCards from "../components/BookCards.jsx"
 import axios from "axios";
 
-const FavoriteBooksPage = () => {
+const BestSellerPage = () => {
   const [books, setBooks] = useState([]);
 
   // useEffect(() => {
@@ -30,4 +30,4 @@ const FavoriteBooksPage = () => {
   );
 }
 
-export default FavoriteBooksPage
+export default BestSellerPage
