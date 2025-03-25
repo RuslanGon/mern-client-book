@@ -40,7 +40,7 @@ const RewievPage = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
+        <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
             <div>
                 <div className='text-amber-500 flex gap-2'>
                     <FaStar />
@@ -53,7 +53,7 @@ const RewievPage = () => {
                 </div>
             </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
             <div>
                 <div className='text-amber-500 flex gap-2'>
                     <FaStar />
@@ -62,11 +62,11 @@ const RewievPage = () => {
                     <FaStar />
                 </div>
                 <div>
-                    <p>These books have been a true discovery for me! The gripping plot, deep characters, and unexpected twists make it impossible to put them down. Every page keeps you engaged, making you feel as if you're living the story alongside the characters.</p>
+                    <p>These books have been a true discovery for me! The gripping plot, deep characters, and unexpected twists make it impossible to put them down. Every page keeps you engaged, making you feel as if you're .</p>
                 </div>
             </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
             <div>
                 <div className='text-amber-500 flex gap-2'>
                     <FaStar />
@@ -79,7 +79,19 @@ const RewievPage = () => {
                 </div>
             </div>
         </SwiperSlide>
-        
+        <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
+            <div>
+                <div className='text-amber-500 flex gap-2'>
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                </div>
+                <div>
+                    <p>I've been reading books from this publisher for a long time, and they never disappoint. Each book is not only beautifully designed but also packed with engaging stories that stay with you long after you finish reading. </p>
+                </div>
+            </div>
+        </SwiperSlide>
       </Swiper>
         </div>
     </div>
