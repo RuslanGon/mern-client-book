@@ -7,12 +7,11 @@ import { Blog } from "./components/Blog.jsx";
 import { About } from "./components/About.jsx";
 import "./index.css";
 import SingleBookPage from "./pages/SingleBookPage.jsx";
-import Folowing from "./components/Folowing.jsx";
 
 function App() {
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <main className="pt-16"> 
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -22,8 +21,8 @@ function App() {
           <Route path="/book/:id" element={<SingleBookPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
-      </main> */}
-<Folowing />
+      </main>
+
     </>
   );
 }
