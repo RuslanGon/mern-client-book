@@ -7,6 +7,7 @@ import { Blog } from "./components/Blog.jsx";
 import { About } from "./components/About.jsx";
 import "./index.css";
 import SingleBookPage from "./pages/SingleBookPage.jsx";
+import DashboardLayout from "./dashboard/DashboardLayout.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/shop/*" element={<ShopPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
+          <Route path="/admin/dashboard" element={<DashboardLayout />} />
           <Route path="/book/:id" element={<SingleBookPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
