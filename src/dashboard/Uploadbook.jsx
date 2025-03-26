@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 const UploadBook = () => {
 
@@ -11,9 +12,11 @@ const bookCategories = [
   "Horror",
   "Autobiography",
   "Romance",
-  "Biography"
+  "Biography",
+  "History"
 ]   
 
+const [selectedBookCategory, setSelectedBookCategory] = useState(bookCategories[0])
   return (
     <div className="px-4 my-5">
       <h2 className="mbb-8 text-3xl font-bold mb-6">Upload a Book</h2>
