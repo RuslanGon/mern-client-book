@@ -1,8 +1,8 @@
 
-const Uploadbook = () => {
+const UploadBook = () => {
   return (
     <div>Uploadbok</div>
   )
 }
 
-export default Uploadbook
+export default UploadBook
