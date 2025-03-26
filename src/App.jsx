@@ -14,8 +14,8 @@ function App() {
 
   return (
     <>
-      {/* Показывать Navbar только если текущий путь не начинается с '/admin/dashboard' */}
-      {location.pathname !== "/admin/dashboard" && <Navbar />}
+      {/* Проверяем, начинается ли путь с "/admin/dashboard", если да, скрываем Navbar */}
+      {!location.pathname.startsWith("/admin/dashboard") && <Navbar />}
       <main className="pt-16">
         <Routes>
           <Route path="/" element={<HomePage />} />
