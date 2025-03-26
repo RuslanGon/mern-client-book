@@ -1,7 +1,11 @@
+import Combar from "./Combar.jsx"
+
 
 const SideBar = () => {
   return (
-    <div>SideBar</div>
+    <div>
+      <Combar />
+    </div>
   )
 }
 
