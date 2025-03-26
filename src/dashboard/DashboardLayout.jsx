@@ -8,17 +8,17 @@ import SideBar from './SideBar.jsx';
 
 const DashboardLayout = () => {
   return (
-  <>
-  <SideBar />
-    <main>
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/upload" element={<UploadBook />} />
-        <Route path="/manage" element={<ManageBooks />} />
-        <Route path="/edit-books/:id" element={<EditBooks />} />
-      </Routes>
-    </main>
-  </>
+     <div className="flex gap-4 flex-col md:flex-row -mt-15 ">
+      <SideBar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/upload" element={<UploadBook />} />
+          <Route path="/manage" element={<ManageBooks />} />
+          <Route path="/edit-books/:id" element={<EditBooks />} />
+        </Routes>
+      </main>
+    </div>
   );
 };
 
