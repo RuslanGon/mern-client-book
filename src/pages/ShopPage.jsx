@@ -1,28 +1,58 @@
-
 import axios from "axios";
 import { useEffect, useState } from "react";
 
 export const ShopPage = () => {
+  const [books, setBooks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-const [books, setBooks] = useState([])
-
-
-useEffect(() => {
-  const fetchBooksShop = async () => {
-    try {
-      const { data } = await axios.get("http://localhost:5000/all-books");
-      setBooks(data);
-    } catch (error) {
-      console.error("Ошибка при загрузке книг:", error);
-    }
-  };
-  fetchBooksShop();
-}, []);
+  useEffect(() => {
+    const fetchBooksShop = async () => {
+      try {
+        const { data } = await axios.get("http://localhost:5000/all-books");
+        setBooks(data);
+      } catch (error) {
+        console.error("Ошибка при загрузке книг:", error);
+        setError("Не удалось загрузить книги. Попробуйте позже.");
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBooksShop();
+  }, []);
 
   return (
-   <div className="mt-28 px-4 lg:px-24">
-    <h2>All Books are here</h2>
+    <div className="mt-10 px-4 lg:px-24">
+      <h2 className="text-5xl font-bold text-center mb-18">All Books are here</h2>
 
-   </div>
+      {loading && <p className="text-center text-lg">Загрузка...</p>}
+      {error && <p className="text-red-500 text-center">{error}</p>}
+
+      {!loading && !error && (
+        <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-6">
+          {books.map((book) => (
+            <div
+              key={book.bookTitle}
+              className="border rounded-lg shadow-md p-4 flex flex-col items-center"
+            >
+              <img
+                src={book.imageURL}
+                alt={book.bookTitle}
+                className="w-full h-80 object-cover mb-4 rounded-lg"
+              />
+              <h3 className="text-lg font-semibold">{book.bookTitle}</h3>
+              <p className="text-gray-600">by {book.authorName}</p>
+              <p className="text-sm text-gray-500">{book.category}</p>
+              <p
+                className="text-gray-700 mt-2 text-sm text-center line-clamp-7"
+                title={book.bookDescription} 
+              >
+                {book.bookDescription}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
