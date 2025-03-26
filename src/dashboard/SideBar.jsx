@@ -37,11 +37,11 @@ const SideBar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="/admin/dashboard/manage"
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 group"
             >
               <FaInbox className="w-5 h-5 mr-2 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
-              Inbox
+              Manage Books
             </a>
           </li>
           <li>
@@ -64,7 +64,7 @@ const SideBar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="/login"
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 group"
             >
               <FaSignInAlt className="w-5 h-5 mr-2 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
@@ -73,11 +73,11 @@ const SideBar = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="/logout"
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 group"
             >
               <FaUserPlus className="w-5 h-5 mr-2 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
-              Sign Up
+              Log Out
             </a>
           </li>
         </ul>
