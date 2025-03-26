@@ -17,6 +17,11 @@ const bookCategories = [
 ]   
 
 const [selectedBookCategory, setSelectedBookCategory] = useState(bookCategories[0])
+
+const handleSelectedBook = (event) => {
+  console.log(event.target.value);
+setSelectedBookCategory(event.target.value)
+}
   return (
     <div className="px-4 my-5">
       <h2 className="mbb-8 text-3xl font-bold mb-6">Upload a Book</h2>
@@ -74,19 +79,17 @@ const [selectedBookCategory, setSelectedBookCategory] = useState(bookCategories[
           </div>
           <div className="lg:w-1/2">
             <label
-              htmlFor="category"
+              htmlFor="inputState"
+              value='Book Category'
               className="mb-2 block font-medium text-gray-700 dark:text-gray-300"
             >
-              Category
+              Book Category
             </label>
-            <input
-              type="text"
-              id="category"
-              name="category"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Category"
-              required
-            />
+            <select className="w-full rounded" value={selectedBookCategory} name="categoryName" id="inputState" onChange={handleSelectedBook}>
+              {
+                bookCategories.map(option => <option key={option} value={option}>{option}</option>)
+              }
+            </select>
           </div>
         </div>
       </form>
