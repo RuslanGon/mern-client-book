@@ -99,6 +99,23 @@ const UploadBook = () => {
             </select>
           </div>
         </div>
+        <div className="lg:w-1/2">
+            <label
+              htmlFor="bookDescription"
+              className="mb-2 block font-medium text-gray-700 dark:text-gray-300"
+            >
+              Book description
+            </label>
+               <textarea
+        id="bookDescription"
+        name="bookDescription"
+        placeholder="Leave a comment..."
+        required
+        rows={5}
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      />
+          </div>
+          
       </form>
     </div>
   );
