@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
 import { ShopPage } from "./pages/ShopPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
@@ -10,9 +10,12 @@ import SingleBookPage from "./pages/SingleBookPage.jsx";
 import DashboardLayout from "./dashboard/DashboardLayout.jsx";
 
 function App() {
+  const location = useLocation();
+
   return (
     <>
-      <Navbar />
+      {/* Показывать Navbar только если текущий путь не начинается с '/admin/dashboard' */}
+      {location.pathname !== "/admin/dashboard" && <Navbar />}
       <main className="pt-16">
         <Routes>
           <Route path="/" element={<HomePage />} />
