@@ -22,8 +22,8 @@ export const ShopPage = () => {
   }, []);
 
   return (
-    <div className="mt-10 px-4 lg:px-24">
-      <h2 className="text-5xl font-bold text-center mb-18">All Books are here</h2>
+    <div className="px-4 lg:px-24  bg-teal-200">
+      <h2 className="text-5xl font-bold text-center mb-10 pt-10">All Books are here</h2>
 
       {loading && <p className="text-center text-lg">Загрузка...</p>}
       {error && <p className="text-red-500 text-center">{error}</p>}
