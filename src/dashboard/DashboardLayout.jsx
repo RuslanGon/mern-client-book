@@ -1,9 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Dashboard from './Dashboard.jsx';
+import Uploadbook from './Uploadbook.jsx';
 
 const DashboardLayout = () => {
   return (
-    <div>DashboardLayout</div>
-  )
-}
+    <div>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/upload" element={<Uploadbook />} />
 
-export default DashboardLayout
+      </Routes>
+    </div>
+  );
+};
+
+export default DashboardLayout;
