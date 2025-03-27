@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 
 const UploadBook = () => {
@@ -22,7 +23,7 @@ const UploadBook = () => {
     setSelectedBookCategory(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
     const bookTitle = form.bookTitle.value;
@@ -32,9 +33,21 @@ const UploadBook = () => {
     const bookDescription = form.bookDescription.value;
     const bookPDFUrl = form.bookPDFUrl.value;
 
-    console.log(bookTitle, authorName, imageURL, category, bookDescription, bookPDFUrl);
-  };
+    const bookObj = {
+      bookTitle, authorName, imageURL, category, bookDescription, bookPDFUrl
+    }
+    // console.log(bookObj);
 
+    try {
+      const response = await axios.post("http://localhost:5000/upload-book", bookObj);
+      if (response.status === 200) {
+        alert("Book uploaded successfully");
+      }
+    } catch (error) {
+      console.error("Error uploading book:", error);
+      alert("Failed to upload book. Please try again.");
+    }
+  };
   return (
     <div className="px-4 my-5">
       <h2 className="mb-8 text-3xl font-bold">Upload a Book</h2>
