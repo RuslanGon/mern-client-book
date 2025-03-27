@@ -5,12 +5,6 @@ import axios from "axios";
 const BestSellerPage = () => {
   const [books, setBooks] = useState([]);
 
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/all-books")
-  //     .then((res) => res.json())
-  //     .then((data) => setBooks(data));
-  // }, []);
-
   useEffect(() => {
     const fetchBooks = async () => {
       try {
