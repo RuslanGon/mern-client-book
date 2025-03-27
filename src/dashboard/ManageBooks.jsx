@@ -25,7 +25,7 @@ const ManageBooks = () => {
   const handleDelete = async (bookId) => {
     try {
       // Отправка запроса на удаление
-      await axios.delete(`http://localhost:5000/delete-book/${bookId}`);
+      await axios.delete(`http://localhost:5000/book/${bookId}`);
       // Обновление списка книг после удаления
       setAllBooks(allBooks.filter(book => book._id !== bookId));
       alert("Book deleted successfully!");  // Успешное удаление
