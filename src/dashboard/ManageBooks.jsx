@@ -75,7 +75,9 @@ const ManageBooks = () => {
                 >
                   Edit
                 </Link>
+                <button className="bg-sky-600 px-4 py-1 font-semibold text-white rounded-sm hover:bg-red-600 cursor-pointer ml-2">Delete</button>
               </td>
+           
             </tr>
           ))}
         </tbody>
