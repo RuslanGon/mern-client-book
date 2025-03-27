@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const ManageBooks = () => {
   const [allBooks, setAllBooks] = useState([]); 
@@ -68,12 +69,12 @@ const ManageBooks = () => {
                 ${book.price}
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-left text-sm font-medium"> 
-                <a
-                  href="#"
+                <Link
+                  to={`/admin/dashboard/edit-books/${book._id}`}
                   className="text-cyan-600 hover:underline dark:text-cyan-500"
                 >
-                  Edit or Manage
-                </a>
+                  Edit
+                </Link>
               </td>
             </tr>
           ))}

@@ -1,13 +1,13 @@
 import React from 'react';
 import {
-  FaChartPie,
   FaThLarge,
   FaInbox,
   FaUsers,
   FaShoppingBag,
   FaSignInAlt,
   FaUserPlus,
-  FaHome
+  FaHome,
+  FaUser
 } from 'react-icons/fa'; 
 
 const SideBar = () => {
@@ -23,7 +23,7 @@ const SideBar = () => {
               href="/admin/dashboard"
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 group"
             >
-              <FaChartPie className="w-5 h-5 mr-2 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
+              <FaUser className="w-5 h-5 mr-2 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
               Dashboard
             </a>
           </li>
