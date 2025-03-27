@@ -22,16 +22,26 @@ const UploadBook = () => {
     setSelectedBookCategory(event.target.value);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const bookTitle = form.bookTitle.value;
+    const authorName = form.authorName.value;
+    const imageURL = form.imageURL.value;
+    const category = form.category.value;
+    const bookDescription = form.bookDescription.value;
+    const bookPDFUrl = form.bookPDFUrl.value;
+
+    console.log(bookTitle, authorName, imageURL, category, bookDescription, bookPDFUrl);
+  };
+
   return (
     <div className="px-4 my-5">
       <h2 className="mb-8 text-3xl font-bold">Upload a Book</h2>
-      <form className="flex lg:w-[900px] flex-col flex-wrap gap-4">
+      <form onSubmit={handleSubmit} className="flex lg:w-[900px] flex-col flex-wrap gap-4">
         <div className="flex gap-8">
           <div className="lg:w-1/2">
-            <label
-              htmlFor="bookTitle"
-              className="mb-2 block font-medium text-gray-700 dark:text-gray-300"
-            >
+            <label htmlFor="bookTitle" className="mb-2 block font-medium text-gray-700 dark:text-gray-300">
               Book Title
             </label>
             <input
@@ -44,10 +54,7 @@ const UploadBook = () => {
             />
           </div>
           <div className="lg:w-1/2">
-            <label
-              htmlFor="authorName"
-              className="mb-2 block font-medium text-gray-700 dark:text-gray-300"
-            >
+            <label htmlFor="authorName" className="mb-2 block font-medium text-gray-700 dark:text-gray-300">
               Author Name
             </label>
             <input
@@ -62,10 +69,7 @@ const UploadBook = () => {
         </div>
         <div className="flex gap-8">
           <div className="lg:w-1/2">
-            <label
-              htmlFor="imageURL"
-              className="mb-2 block font-medium text-gray-700 dark:text-gray-300"
-            >
+            <label htmlFor="imageURL" className="mb-2 block font-medium text-gray-700 dark:text-gray-300">
               Book Image URL
             </label>
             <input
@@ -78,15 +82,12 @@ const UploadBook = () => {
             />
           </div>
           <div className="lg:w-1/2">
-            <label
-              htmlFor="inputState"
-              className="mb-2 block font-medium text-gray-700 dark:text-gray-300"
-            >
+            <label htmlFor="category" className="mb-2 block font-medium text-gray-700 dark:text-gray-300">
               Book Category
             </label>
             <select
-              id="inputState"
-              name="categoryName"
+              id="category"
+              name="category"
               value={selectedBookCategory}
               onChange={handleSelectedBook}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -100,41 +101,36 @@ const UploadBook = () => {
           </div>
         </div>
         <div className="lg:w-1/2">
-            <label
-              htmlFor="bookDescription"
-              className="mb-2 block font-medium text-gray-700 dark:text-gray-300"
-            >
-              Book description
-            </label>
-               <textarea
-        id="bookDescription"
-        name="bookDescription"
-        placeholder="Write your book description..."
-        required
-        rows={6}
-        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      />
-          </div>
-<div className="lg:w-1/2">
-            <label
-              htmlFor="bookPDFUrl"
-              className="mb-2 block font-medium text-gray-700 dark:text-gray-300"
-            >
-              Book PDF URL
-            </label>
-            <input
-              type="text"
-              id="bookPDFUrl"
-              name="bookPDFUrl"
-              value='Book PDF URL'
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Book pdf url"
-              required
-            />
-          </div>
-            <div className="flex justify-center">
-            <button className="bg-blue-700 text-white font-semibold px-5 py-2 rounded hover:bg-black cursor-pointer" type="submit">Upload Book</button>
-            </div>
+          <label htmlFor="bookDescription" className="mb-2 block font-medium text-gray-700 dark:text-gray-300">
+            Book description
+          </label>
+          <textarea
+            id="bookDescription"
+            name="bookDescription"
+            placeholder="Write your book description..."
+            required
+            rows={6}
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+        </div>
+        <div className="lg:w-1/2">
+          <label htmlFor="bookPDFUrl" className="mb-2 block font-medium text-gray-700 dark:text-gray-300">
+            Book PDF URL
+          </label>
+          <input
+            type="text"
+            id="bookPDFUrl"
+            name="bookPDFUrl"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Book pdf url"
+            required
+          />
+        </div>
+        <div className="flex justify-center">
+          <button className="bg-blue-700 text-white font-semibold px-5 py-2 rounded hover:bg-black cursor-pointer" type="submit">
+            Upload Book
+          </button>
+        </div>
       </form>
     </div>
   );
