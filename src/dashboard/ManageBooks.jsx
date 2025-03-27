@@ -44,7 +44,7 @@ const ManageBooks = () => {
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
               Prices
             </th>
-            <th className="relative px-6 py-3">
+            <th className="relative px-6 py-3 text-left"> 
               <span className="text-xs text-gray-500 uppercase">Edit or Manage</span>
             </th>
           </tr>
@@ -56,10 +56,10 @@ const ManageBooks = () => {
                 {index + 1}
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                {book.bookTitle} {/* Используем bookTitle */}
+                {book.bookTitle}
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">
-                {book.authorName} {/* Используем authorName */}
+                {book.authorName}
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">
                 {book.category}
@@ -67,12 +67,12 @@ const ManageBooks = () => {
               <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">
                 ${book.price}
               </td>
-              <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+              <td className="px-6 py-4 whitespace-nowrap text-left text-sm font-medium"> 
                 <a
                   href="#"
                   className="text-cyan-600 hover:underline dark:text-cyan-500"
                 >
-                  Edit
+                  Edit or Manage
                 </a>
               </td>
             </tr>
