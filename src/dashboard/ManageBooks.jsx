@@ -22,6 +22,19 @@ const ManageBooks = () => {
     fetchManageBooks();
   }, []);
 
+  const handleDelete = async (bookId) => {
+    try {
+      // Отправка запроса на удаление
+      await axios.delete(`http://localhost:5000/delete-book/${bookId}`);
+      // Обновление списка книг после удаления
+      setAllBooks(allBooks.filter(book => book._id !== bookId));
+      alert("Book deleted successfully!");  // Успешное удаление
+    } catch (error) {
+      console.error("Error deleting book:", error);
+      setError("Error deleting book.");
+    }
+  };
+
   return (
     <div className="px-4 my-5">
       <h2 className="mb-8 text-3xl font-bold">Manage Your Books</h2>
@@ -75,7 +88,7 @@ const ManageBooks = () => {
                 >
                   Edit
                 </Link>
-                <button className="bg-sky-600 px-4 py-1 font-semibold text-white rounded-sm hover:bg-red-600 cursor-pointer ml-2">Delete</button>
+                <button onClick={() => handleDelete(book._id)} className="bg-sky-600 px-4 py-1 font-semibold text-white rounded-sm hover:bg-red-600 cursor-pointer ml-2">Delete</button>
               </td>
            
             </tr>
