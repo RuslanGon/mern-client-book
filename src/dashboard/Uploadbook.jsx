@@ -35,19 +35,29 @@ const UploadBook = () => {
 
     const bookObj = {
       bookTitle, authorName, imageURL, category, bookDescription, bookPDFUrl
-    }
-    // console.log(bookObj);
+    };
 
     try {
+      console.log("Uploading book..."); // Лог для проверки начала загрузки
+
       const response = await axios.post("http://localhost:5000/upload-book", bookObj);
-      if (response.status === 200) {
+
+      console.log("Response status:", response.status); // Логируем статус ответа
+
+      if (response.status === 200 || response.status === 201) {
         alert("Book uploaded successfully");
+        form.reset();  // Сброс формы после успешной отправки
+      } else {
+        console.error("Unexpected response status:", response.status); // Логируем неожиданный статус
       }
     } catch (error) {
       console.error("Error uploading book:", error);
       alert("Failed to upload book. Please try again.");
+    } finally {
+      form.reset();  // Сброс формы в любом случае
     }
-  };
+}; 
+
   return (
     <div className="px-4 my-5">
       <h2 className="mb-8 text-3xl font-bold">Upload a Book</h2>
