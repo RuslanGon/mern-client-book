@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 const EditBooks = () => {
-  const { id } = useParams(); // Получаем ID книги из URL
+  const { id } = useParams(); 
   const [book, setBook] = useState({
     bookTitle: "",
     authorName: "",
@@ -13,7 +13,7 @@ const EditBooks = () => {
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); // Используем useNavigate вместо useHistory
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchBook = async () => {
@@ -55,7 +55,7 @@ const EditBooks = () => {
     e.preventDefault();
     try {
       const response = await fetch(`http://localhost:5000/book/${id}`, {
-        method: "PATCH", // Используем PATCH для частичного обновления данных
+        method: "PATCH",
         headers: {
           "Content-Type": "application/json",
         },
@@ -66,15 +66,15 @@ const EditBooks = () => {
           category: book.category,
           bookDescription: book.bookDescription,
           bookPDFUrl: book.bookPDFUrl
-        }), // Отправляем данные книги в теле запроса
+        }), 
       });
 
       if (!response.ok) {
         throw new Error("Failed to update book");
       }
 
-      // Перенаправляем пользователя на страницу книги после успешного обновления
-      navigate(`/book/${id}`); // Заменяем history.push на navigate
+
+      navigate(`/book/${id}`); 
     } catch (err) {
       setError(err.message);
     }
@@ -150,7 +150,7 @@ const EditBooks = () => {
         </div>
         <div className="flex justify-center">
           <button className="bg-blue-700 text-white font-semibold px-5 py-2 rounded hover:bg-black cursor-pointer" type="submit">
-            Save Changes
+            Save update book
           </button>
         </div>
       </form>
